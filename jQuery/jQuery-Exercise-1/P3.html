@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 3</title>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea><br/>
+    <button id="getTextareaValue">Get textarea text</button>
+
+    <!-- Script to get value of textarea on buttonclick -->
+    <script>
+        //On the click event of button find the value of textarea
+        $("#getTextareaValue").click(()=>{
+            //alert the value of textarea
+           alert($("#textarea").val());
+        });
+    </script>
+</body>
+</html>

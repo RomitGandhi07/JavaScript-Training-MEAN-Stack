@@ -1,0 +1,66 @@
+<div class="container">
+    <div class="row mb-3">
+        <h2 id="line">Signup</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <form name="signUpForm">
+                <div class="form-group mb-3">
+                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" required>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="password" class="form-control" name="password" id="password"
+                        placeholder="Enter password" required>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="password" class="form-control" name="confirmPassword" id="confirmPassword"
+                        placeholder="Confirm password" required>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <a href="/login">Back to Login</a>
+                    <button type="button" class="btn btn-primary" onclick="signUp()">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    async function signUp() {
+        try {
+            // Get Details
+            let form = document.forms.signUpForm;
+            const name = form.elements.name.value
+            const email = form.elements.email.value;
+            const password = form.elements.password.value;
+            const confirmPassword = form.elements.confirmPassword.value;
+
+            //Check password and confirm password are same or not
+            if (password != confirmPassword) { throw new Error("Please enter same passwoed"); }
+
+            const data = { name, email, password };
+
+            // call POST api to save user in the database
+            const response = await fetch("/api/signup", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            // If response is not ok then throw error
+            if (!response.ok) { throw new Error(await response.text()); }
+
+            //Redirect
+            window.location = "/home";
+        }
+        catch (err) {
+            alert(err);
+        }
+    }
+</script>

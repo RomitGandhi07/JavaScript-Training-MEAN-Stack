@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Course</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/course.js"></script>
+</head>
+
+<body onload="changeAdminNav()">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html">LMS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./index.html">Home Page</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./addCourse.html">Add Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./assignCourse.html">Assign Course</a>
+                    </li>
+                    <li class="nav-item">
+                        <p class="nav-link" id="userName">Welcome</p>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" onclick="logoutAdmin()">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <h2 id="line">Add Course</h2>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-sm-12 col-xs-12">
+                <form name="addCourseForm">
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" name="courseTitle" id="courseTitle" placeholder="Enter Course Name" required>
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" class="form-control" name="courseImageURL" id="courseImageURL" placeholder="Enter CourseImage URL eg: https://www.gstatic.com/webp/gallery3/1.png" required>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-primary" onclick="addCourse()">Add Course</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

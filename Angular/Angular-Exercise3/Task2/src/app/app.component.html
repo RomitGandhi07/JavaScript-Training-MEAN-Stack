@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <button class="btn btn-primary" (click)="addTextInput()">Add New Text-Input</button>
+      <button class="btn btn-primary ml-4" (click)="addNumberInput()">Add New Number-Input</button>
+      <button class="btn btn-primary ml-4" (click)="addTextareaInput()">Add New Textarea-Input</button>
+    </div>
+    
+    <div class="col-12 mt-2">
+      <label for="username">User Name [Text Input]</label>
+      <input class="form-control" type="text" id="username" placeholder="User Name">
+
+      <label for="age">Age [Number Input]</label>
+      <input class="form-control" type="text" id="age" placeholder="Age">
+
+      <label for="address">Address [Textarea Input]</label>
+      <textarea class="form-control" cols="30" rows="1" id="address" placeholder="address"></textarea>
+    </div>
+
+    <div class="col-12">
+      <div class="mt-2" #inputs></div>
+    </div>
+  </div>
+</div>

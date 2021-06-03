@@ -1,0 +1,28 @@
+<div class="row ml-4">
+    <div class="col-12">
+        <div class="d-flex justify-content-start">
+            <h3><b>Shopping Cart</b></h3>
+            <app-total-cart-items [totalItems]="totalItems"></app-total-cart-items>
+        </div>
+        
+        <button class="btn btn-primary add-cart" (click)="addItemToCart()">Add Item to Cart</button>
+
+        <div class="row cart-items">
+            <div class="col-12">
+                <h5 *ngIf="totalItems>0; else noItems" class="mt-5 text-bold"><b>Cart Items</b></h5>
+            </div>
+            <ng-template #noItems>
+                <h5 class="mt-5 text-bold"><b>No Items...</b></h5>
+            </ng-template>
+            
+            <div class="col-12">
+                <app-cart-item-thumbnail *ngFor="let item of items" [item]="item"
+                    (increaseQuantity)="increaseItemQuantity($event)" (deleteItem)="deleteItemFromCart($event)"
+                    (decreaseQuantity)="decreaseItemQuantity($event)">
+                </app-cart-item-thumbnail>
+            </div>
+
+        </div>
+
+    </div>
+</div>

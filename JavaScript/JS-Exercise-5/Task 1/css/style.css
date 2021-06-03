@@ -1,0 +1,22 @@
+.signUpForm{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.course-box{
+    position: relative;
+}
+.course-image{
+    height: 17rem;
+    width: 100%;
+}
+
+#userName{
+    font-weight: bold;
+}
+
+.courseTitle{
+    height: 2rem;
+    width:10rem;
+}

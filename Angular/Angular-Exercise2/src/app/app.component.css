@@ -1,0 +1,8 @@
+:host{
+    color: white !important;
+}
+
+app-parent-component{
+    display: block;
+    border: 1px solid whitesmoke;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 9</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <div>
+        <label>
+            <input type="radio" name="color" value="Red">
+            <span>name?</span>
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="radio" name="color" value="Green">
+            <span>value?</span>
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="radio" name="color" value="Black">
+            <span>value?</span>
+        </label>
+    </div>
+    <button id="button1">Click to see the effect</button>
+    
+    <!-- Script to change span text to red whose before element's value is red -->
+    <script>
+        // Do task on button click
+        $("#button1").click(()=>{
+            //Chnage value to red of span
+            $(`input[value="Red"]`).next().text("Red");
+        });
+    </script>
+</body>
+</html>

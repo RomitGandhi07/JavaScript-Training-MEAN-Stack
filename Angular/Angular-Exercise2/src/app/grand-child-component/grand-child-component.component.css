@@ -1,0 +1,10 @@
+:host{
+    display: block;
+    border: 1px solid whitesmoke;
+}
+
+.grand-child-style-button{
+    background-image: linear-gradient(to right, #6672e0, #4e5cd6 , #9d3fc2);
+    border-radius: 2px;
+    border:none;
+}

@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2 class="title">Angular Directives</h2>
+    </div>
+  </div>
+
+  <!-- Font Size Updater -->
+  <div class="row mt-2">
+    <div class="col-8 border">
+      <h4 class="title">Font Size Updator</h4>
+      <p style="font-size: 18px;" fontSizeUpdator='52px'>Hover Me! FontSize-Defualt => 18px</p>
+      <p style="font-size: 10px;" fontSizeUpdator>Hover Me! FontSize-Defualt => 10px</p>
+    </div>
+  </div>
+
+  <!-- App Authorization -->
+  <div class="row border mt-3">
+    <div class="col-12">
+      <h4 class="title">App Authorization</h4>
+    </div>
+
+    <!-- Add Item -->
+      <div class="card col-5 ml-5">
+        <h5 class="card-title title text-center">Add Item</h5>
+        <div class="card-body">
+          <input type="text" class="form-control" [(ngModel)]="item">
+          <button (click)="addItem()" class="btn btn-primary mt-2 ml-2">Add Item</button>
+        </div>
+      </div>
+      
+      <!-- Add/Remove authorization token -->
+      <div class="card col-5 ml-2">
+        <h5 class="card-title title text-center">Add/Remove Authorization Token</h5>
+        <div class="card-body">
+          <div *ngFor="let item of items; let i=index">
+            <label>
+              <input type="checkbox" name="items" (change)=changeAuthorizationTokens(i)>
+              {{item}}
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <!-- Privilleges -->
+      <div class="card col-10 ml-5 mt-3">
+        <h5 class="card-title title text-center">Privilleges</h5>
+        <div class="card-body">
+          <p class="title">User Allowed Tokens:
+            <span *ngFor="let token of authorizationTokens" class="normal">&nbsp;{{token}}</span></p>
+            <p *ngFor="let item of items">
+              <span class="title">{{item}}</span> : <span *isAuthorized="authorizationTokens;Token:item">Visible</span>
+            </p>
+        </div>
+      </div>
+
+  </div>
+</div>

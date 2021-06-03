@@ -1,0 +1,21 @@
+.box{
+    border: 2px solid black;
+    height: 200px;
+    width: 200px;
+    position: relative;
+}
+
+.divNumber{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.inactiveLink {
+    pointer-events: none;
+    cursor: default;
+ }
+
+#one, #three {
+    background-color: rgb(162, 162, 221);
+}

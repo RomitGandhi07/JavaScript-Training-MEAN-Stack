@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row mb-3">
+        <h2 id="line">Login</h2>
+    </div>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-xs-12">
+            <form name="loginForm">
+                <div class="form-group mb-3">
+                    <input type="text" class="form-control" name="email" id="email" placeholder="Enter Email" required>
+                </div>
+                <div class="form-group mb-3">
+                    <input type="password" class="form-control" name="password" id="password"
+                        placeholder="Enter password" required>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <a href="/signup">Back to Signup</a>
+                    <button type="button" class="btn btn-primary" onclick="login()">Login</button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <a href="/login/google" class="btn btn-lg google mt-3"><i class="fab fa-google mx-3"></i>Login with google</a> <br/>
+            <a href="/login/github" class="btn btn-lg github mt-3"><i class="fab fa-github-square mx-3"></i>Login with github</a> <br />
+            <a href="/login/facebook" class="btn btn-lg facebook mt-3"><i class="fab fa-facebook-square mx-3"></i>Login with Facebook</a> <br />
+        </div>
+    </div>
+</div>
+
+<script>
+    async function login() {
+        try {
+            // Get Details
+            let form = document.forms.loginForm;
+            const email = form.elements.email.value;
+            const password = form.elements.password.value;
+
+            //Check both the fields are present or not
+            if (!email || !password) { throw new Error("Please enter both the fields"); }
+
+            const data = { email, password };
+
+            // call POST api to save user in the database
+            const response = await fetch("/api/login", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(data),
+            });
+
+            // If response is not ok then throw error
+            if (!response.ok) { throw new Error(await response.text()); }
+
+            //Redirect
+            window.location="/home";
+        }
+        catch (err) {
+            alert(err);
+        }
+    }
+</script>

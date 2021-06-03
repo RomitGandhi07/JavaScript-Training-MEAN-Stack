@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 12</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        div {
+            width: 20px;
+            height: 20px;
+            margin: 5px;
+            float: left;
+            border: 2px solid green;
+        }
+
+        .red {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <button id="button1">Click to see the effect</button>
+
+    <!-- Script to add class red to 4th div -->
+    <script>
+        //Add class red to 4th div on button click
+        $("#button1").click(()=>{
+            $("div:nth-child(4)").addClass("red");
+        });
+    </script>
+</body>
+
+</html>

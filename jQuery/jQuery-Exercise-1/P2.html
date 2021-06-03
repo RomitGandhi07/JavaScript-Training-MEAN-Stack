@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 2</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>PHP Exercise</p>
+    <p>Python Exercise</p>
+    <p>JavaScript</p>
+    <p>jQquery Exercise</p>
+    <button id="button1">Make First Word Bold</button>
+
+    <!-- Script to make first word bold of all words -->
+    <script>
+        // On button click
+        $("#button1").click(()=>{
+            //Iterate over all p and get their text and make first word bold and update their html
+            $('p').each(function(){
+                //Get that elemt and it's value and index of first space
+                const element = $(this);
+                let value=element.text();
+                let index=value.indexOf(" ");
+                
+                //If space is not there means only single word so make index= length of text
+                if(index==-1){index=value.length;}
+
+                //Make first word bold and update the element
+                value="<b>"+value.slice(0,index)+"</b>"+value.slice(index,value.length);
+                element.html(value);
+            });
+        });
+        
+    </script>
+</body>
+</html>

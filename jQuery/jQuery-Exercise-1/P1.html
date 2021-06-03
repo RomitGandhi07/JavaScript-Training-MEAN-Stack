@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 1</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        #demoDiv {
+            height: 1500px;
+            width: 100%;
+            border: 2px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="demoDiv">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quasi velit dolorum sed officiis eveniet tenetur,
+            debitis vero quis atque ab pariatur qui magni optio, ipsum aspernatur nobis? Enim obcaecati voluptatum sint
+            eum vero nulla, praesentium dolore iure officiis dolores totam odit et id quas exercitationem, nostrum,
+            corporis incidunt dicta at!</p>
+    </div>
+    <button id="moveTop">Move to Top</button>
+    <!-- Script to move to top on button click -->
+    <script>
+        // On button click move to top
+        $("#moveTop").click(() => {
+            $(document).scrollTop(0);
+        });
+    </script>
+</body>
+
+</html>

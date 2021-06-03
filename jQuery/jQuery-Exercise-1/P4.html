@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 4</title>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        p {
+            margin: 8px;
+            font-size: 16px;
+        }
+
+        .rapid_font_color {
+            color: blue;
+        }
+
+        .rapid_background {
+            background: orange;
+        }
+    </style>
+</head>
+
+<body>
+    <p>PHP</p>
+    <p>Java</p>
+    <p>Python</p>
+
+    <!-- Script for applying classes to last paragraph element -->
+    <script>
+        //Apply rapid_font_color and rapid_backgrond to last p element
+        $("p:last").addClass("rapid_font_color rapid_background");
+
+        //Another Way of doing the same
+        // $("p").last().addClass("rapid_font_color rapid_background");
+    </script>
+</body>
+
+</html>

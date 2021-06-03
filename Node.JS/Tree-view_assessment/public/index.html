@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeJS Test</title>
+    <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+   integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+<!-- jQuery -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script src="./js/tags.js"></script>
+</head>
+<body onload="loadTags()">
+    <div class="container">
+        <div class="row">
+            <h4>Add Parent</h4>
+            <div class="col-8">
+                <input type="text" class="form-control" name="parentName" id="parentName" placeholder="Enter Parent Name" required/>
+            </div>
+            <div class="col-4">
+                <button class="btn btn-success" onclick="addParent()">Add Parent</button>
+            </div>
+        </div>
+        <hr/>
+        <div class="row" id="moveSection" style="display: none;">
+            <h4>Move to</h4>
+            <select name="moveDropdown" id="moveDropdown">
+
+            </select>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <ul id="tagsList">
+                    
+                </ul>
+            </div>
+        </div>
+    </div>    
+</body>
+</html>

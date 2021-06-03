@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1- Problem 10</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .disableElements{
+            border: 2px dotted red;
+        }
+    </style>
+</head>
+
+<body>
+        First name: <input type="text" name="fname"><br/><br/>
+        Last name: <input type="text" name="lname" disabled><br/><br/>
+        <button id="findDisabledElements">Find Disabled elements</button>
+
+    <!-- Here I have make border red for elements which are disabled -->
+    <!-- Script to find disabled elements -->
+    <script>
+        //Add class which makes border red in disabled elements on button click
+        $("#findDisabledElements").click(()=>{
+            $("*:disabled").addClass("disableElements");
+        });
+    </script>
+</body>
+
+</html>

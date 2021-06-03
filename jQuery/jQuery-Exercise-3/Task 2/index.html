@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- Bootstrap CSS -->
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+
+   <!-- jQuery -->
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+   <!-- Font-Awensome -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous" />
+
+   <!--  -->
+   <script src="./js/main.js"></script>
+   <link rel="stylesheet" href="./css/style.css">
+
+   <title>Exercise 3 - Task 2</title>
+</head>
+
+<body onresize="changeAfterScreenResize()">
+   <div class="container">
+      <nav class="d-flex justify-content-between">
+         <div class="logo-div">
+            <img class="logo" src="./images/logo.png" alt="Logo">
+         </div>
+
+         <div class="tab" onload="demo()">
+            <button class="btn tablinks active-tab" onclick="openCityInTab(this)">London</button>
+            <button class="btn tablinks" onclick="openCityInTab(this)">Paris</button>
+            <button class="btn tablinks" onclick="openCityInTab(this)">Tokyo</button>
+         </div>
+
+      </nav>
+      <button class="accordion orange mt-2" onclick="openCityInAccordion(this)">
+         <div class="d-flex justify-content-between">
+            <p>London</p>
+            <div class="arrow-icon"><i class="fas fa-chevron-circle-down"></i></div>
+         </div>
+      </button>
+      <div id="London" class="content mt-3" style="display: block !important;">
+         <img class="img-responsive cityImage" src="./images/1.jpg" alt="London">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolores molestiae veritatis nisi sit
+            impedit quaerat velit cumque quis iusto!</p>
+      </div>
+
+
+      <button class="accordion" onclick="openCityInAccordion(this)">
+         <div class="d-flex justify-content-between">
+            <p>Paris</p>
+            <div class="arrow-icon"><i class="fas fa-chevron-circle-right"></i></div>
+         </div>
+      </button>
+      <div id="Paris" class="content mt-3">
+         <img class="img-responsive cityImage" src="./images/2.jpg" alt="Paris">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolores molestiae veritatis nisi sit
+            impedit quaerat velit cumque quis iusto!</p>
+      </div>
+
+
+      <button class="accordion green" onclick="openCityInAccordion(this)">
+         <div class="d-flex justify-content-between">
+            <p>Tokyo</p>
+            <div class="arrow-icon"><i class="fas fa-chevron-circle-right"></i></div>
+         </div>
+      </button>
+      <div id="Tokyo" class="content mt-3">
+         <img class="img-responsive cityImage" src="./images/3.jpg" alt="Tokyo">
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident dolores molestiae veritatis nisi sit
+            impedit quaerat velit cumque quis iusto!</p>
+      </div>
+   </div>
+</body>
+
+</html>

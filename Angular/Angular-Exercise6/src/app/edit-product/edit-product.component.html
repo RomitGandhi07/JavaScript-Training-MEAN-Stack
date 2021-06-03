@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2>Edit Product</h2>
+        </div>
+        <h5 class="mt-5" *ngIf="!isValidProduct">Product with given id is not found...</h5>
+        <div class="col-md-6 col-sm-12 col-xs-12" *ngIf="isValidProduct">
+            
+            <div class="form-group mt-5">
+                <label class="form-label-text" for="productName">Product Name</label>
+                <input type="text" class="form-sm-control  ml-2" id="productName" [(ngModel)]="productName" required><br>
+            </div>
+            <button class="btn btn-primary mt-1" (click)="updateProduct()">update</button>
+        </div>
+    </div>
+</div>

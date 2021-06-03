@@ -1,0 +1,9 @@
+<div class="row m-4">
+    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
+        <h4>Parent Componenet</h4>
+        <h4>Parent Counter: {{parentCounter}}</h4>
+        <button class="btn btn-primary" (click)="child.updateChildCounter()">Update Child Counter</button>
+        <app-child-component class="m-5" #child (parentIncrement)="updateParentCounter()"></app-child-component>
+    </div>
+</div>
+

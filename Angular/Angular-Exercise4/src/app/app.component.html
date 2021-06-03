@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <h2>Angular Pipes</h2>
+    </div>
+
+    <div class="col-12 mt-5 divBorder">
+      <h4><span class="title">Reverse the string</span></h4>
+      <div class="mt-4">
+        <h5><span class="title">Original String:</span> {{str}}</h5>
+        <h5><span class="title">Reversed String:</span> {{str | stringReverse}}</h5>
+      </div>  
+    </div>
+
+    <div class="col-12 mt-5 divBorder">
+      <h4><b>Format Date</b></h4>
+      <div class="mt-4">
+        <h5><span class="title">Original Date String:</span> {{curDate}}</h5>
+        <!-- We can do it using build-in pipe as well for that uncomment below line -->
+        <!-- <h5><span class="title">Formatted Date String:</span> {{curDate | date:"dd-MM-yyyy"}}</h5> -->
+        <h5><span class="title">Formatted Date String:</span> {{curDate | formatDate}}</h5>
+      </div>  
+    </div>
+
+
+    <div class="col-12 mt-5 divBorder">
+      <h4><span class="title">Name Initials</span></h4>
+      <div class="mt-4">
+        <h5><span class="title">Name:</span> {{name}}</h5>
+        <h5><span class="title">Initials:</span> {{name | nameInitials}}</h5>
+      </div>  
+    </div>
+  </div>
+</div>

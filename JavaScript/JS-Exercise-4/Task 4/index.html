@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 4 - Task 4</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-responsive w-100" id="dataTable">
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="form-group col-8">
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group col-8">
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-md btn-outline-primary" id="addButton"
+                                    onclick="addRow()">Add</button>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" id="selectAll" onclick="selectAll()" disabled>
+                            </div>
+                        </td>
+                        <td>Select All</Select></td>
+                        <td id="rowsSelected">Total 0 selected row(s)</td>
+                        <td>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-md btn-outline-primary" id="deleteRowsButton"
+                                    onclick="deleteRows()" disabled>Delete</button>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

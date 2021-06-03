@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row mb-3">
+        <div>
+            <h3>Welcome,{{name}}!!!</h3>
+        </div>
+        <div class="col-3">
+            <button class="btn btn-md btn-danger" onclick="logout()">Logout</button>
+        </div>
+
+    </div>
+</div>
+
+<script>
+    // This function is responsible for logout
+    const logout=()=>{
+        //redirect to logout api
+        window.location="./logout";
+}
+</script>

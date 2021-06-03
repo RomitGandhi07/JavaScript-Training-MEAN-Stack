@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3 - Problem 4</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        const makeTable = (rows, cols) => {
+            //Create Table element and append it to the body
+            const table = document.createElement('table');
+            table.id = "dynamicTable";
+            table.border = "2px solid black";
+            document.body.append(table);
+
+            //Iterate over rows and cols and insert them in the table
+            for (let i = 0; i < rows; ++i) {
+                const row = table.insertRow(i);
+                for (let j = 0; j < cols; ++j) {
+                    const col = row.insertCell(j);
+                    
+                    //change content of cell
+                    col.innerHTML = `Row-${i} Column-${j}`;
+                }
+            }
+        };
+        const rows = +prompt("Please enter no of rows", 5);
+        const cols = +prompt("Please enter no of columns", 5);
+        //Check inputs are valid or not
+        if (isFinite(rows) && isFinite(cols) && rows > 0 && cols > 0) {
+            makeTable(rows, cols);
+        }
+        else {
+            alert("Input is not valid...");
+        }
+    </script>
+</body>
+
+</html>

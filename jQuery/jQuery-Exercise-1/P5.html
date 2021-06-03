@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 5</title>
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <p>Demo1</p>
+    <p>Demo2</p>
+    <p>Demo3</p>
+    <br/>
+    <button id="appendElement">Click to see effect</button>
+
+    <!-- Script to append DOM element after every paragraph -->
+    <script>
+        //on click event of button add element 
+        $("#appendElement").click(()=>{
+            $("p").after("Appended Demo");
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<div class="row">
+    <h2>User Details</h2>
+    <div class="col-12 mt-4">
+        <p><span class="title">User Name: </span>{{userDetails.userName}}</p>
+        <p><span class="title">First Name: </span>{{userDetails.firstName}}</p>
+        <p><span class="title">Last Name: </span>{{userDetails.lastName}}</p>
+        <p><span class="title">Gender: </span>{{userDetails.gender}}</p>
+        <p><span class="title">Is Student? </span>
+                <span *ngIf="userDetails.isStudent">Yes</span>
+                <span *ngIf="!userDetails.isStudent">No</span>
+        </p>
+        <p><span class="title">City: </span>{{userDetails.city}}</p>
+        <p><span class="title">Street Address: </span>{{userDetails.streetAddress}}</p>
+        <p><span class="title">State Id: </span>{{userDetails.state}}</p>
+        <p><span class="title">Country Id: </span>{{userDetails.country}}</p>
+    </div>
+</div>

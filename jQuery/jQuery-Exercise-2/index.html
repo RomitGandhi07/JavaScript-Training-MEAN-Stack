@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2 - Task </title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <table class="table table-responsive w-100" id="dataTable">
+                    <tr>
+                        <td></td>
+                        <td>
+                            <div class="form-group col-8">
+                                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group col-8">
+                                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group col-8">
+                                <input type="text" class="form-control" id="backgroundColor" placeholder="#background color">
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group col-8">
+                                <div class="form-group col-8">
+                                    <select name="textSize" id="textSize">
+                                        <option selected disabled value="">Text Size</option>
+                                        <option value="Large">Large</option>
+                                        <option value="Medium">Medium</option>
+                                        <option value="Small">Small</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-md btn-outline-primary" id="addButton"
+                                    onclick="addRow()">Add</button>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" name="selectAll" id="selectAll" onclick="selectAll()" disabled>
+                            </div>
+                        </td>
+                        <td>Select All</Select></td>
+                        <td id="rowsSelected">Total 0 selected row(s)</td>
+                        <td>
+                            <div class="form-group">
+                                <button type="button" class="btn btn-md btn-outline-primary" id="deleteRowsButton"
+                                    onclick="deleteRows()" disabled>Delete</button>
+                            </div>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+                <div id="modifySection" style="display:none" class="mt-5">
+                    <h6>Modify above selected Items</h6>
+                    <table>
+                        <tr>
+                            <td>
+                                <div class="form-group col-8">
+                                    <input type="text" class="form-control" id="modifyBackgroundColor" placeholder="#background color">
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group col-8">
+                                    <div class="form-group col-8">
+                                        <select name="modifyTextSize" id="modifyTextSize">
+                                            <option selected disabled value="">Text Size</option>
+                                            <option value="Large">Large</option>
+                                            <option value="Medium">Medium</option>
+                                            <option value="Small">Small</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="form-group">
+                                    <button type="button" class="btn btn-md btn-outline-primary" id="modifyButton"
+                                            onclick="modify()">Apply</button>
+                                </div>
+                            </td>                 
+                        </tr>
+                    </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

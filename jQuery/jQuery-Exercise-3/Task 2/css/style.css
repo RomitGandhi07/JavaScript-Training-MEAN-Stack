@@ -1,0 +1,58 @@
+.tab button.active-tab {
+  background-color: #0275d8;
+}
+
+.content {
+  display: none;
+}
+
+
+.cityImage{
+    height: 300px;
+    width: 300px;
+}
+
+.logo{
+  height: 50px;
+  width: 130px;
+}
+
+
+.accordion {
+  background-color: #eee;
+  color:black;
+  font-size: large !important;
+  width: 100%;
+  padding: 18px;
+  border: none;
+  text-align: left;
+  font-size: 15px;
+  transition: 0.4s;
+  display: none;
+}
+
+ /* .accordion:hover {
+  backgrou
+  nd-color: #ccc; 
+} */
+
+
+.orange{
+  background-color: orange;
+}
+
+.green{
+  background-color: rgb(10, 190, 10);
+}
+
+@media only screen and (max-width: 480px) {
+  body {
+    margin: 1.4rem;
+  }
+  .tab {
+    display: none !important;
+  }
+  .accordion {
+    display: block !important;
+  }
+}

@@ -1,0 +1,11 @@
+.parent-style-button{
+    background-image: linear-gradient(to right, #ff80aa , #ffa64d);
+    border-radius: 2px;
+    border:none;
+}
+
+app-child-component{
+    display: block;
+    border: 1px solid whitesmoke;
+}
+

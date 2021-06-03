@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 7</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        div {
+            background: #B0E0E6;
+            border: 1px solid #e30ae8;
+            width: 20px;
+            height: 30px;
+            margin: 0 5px;
+            float: left;
+        }
+
+        div.colored {
+            background: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+    <button id="button1">Click to see effect</button>
+    <script>
+        //Apply animation in div 1 and div2
+        const applyAnimation=()=>{
+            $("#div1,#div2").slideToggle("slow",applyAnimation);
+        };
+        applyAnimation();
+
+        //apply colored class to div which are animated
+        $("#button1").click(function () {
+            $("div:animated").addClass("colored");
+        });
+    </script>
+</body>
+
+</html>

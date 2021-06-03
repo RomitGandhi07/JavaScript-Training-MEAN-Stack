@@ -1,0 +1,10 @@
+body{
+    background-color: black ;
+    color: white ;
+}
+
+img{
+    height: 400px;
+    width: 800px;
+    margin-left: 10rem;
+}

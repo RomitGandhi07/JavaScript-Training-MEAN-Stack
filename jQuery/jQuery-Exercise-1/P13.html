@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 13</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .red {
+            background: red;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>Cell-1</td>
+            <td>Cell-2</td>
+            <td>Cell-3</td>
+        </tr>
+        <tr>
+            <td>Cell-4</td>
+            <td>Cell-5</td>
+            <td>Cell-6</td>
+        </tr>
+        <tr>
+            <td>Cell-7</td>
+            <td>Cell-8</td>
+            <td>Cell-9</td>
+        </tr>
+    </table>
+    <button id="button1">Find 6th cell</button>
+    <!-- Script to find 6th cell and highlight it -->
+    <script>
+        $("#button1").click(()=>{
+            $("td:eq(5)").addClass("red");
+        });
+    </script>
+</body>
+
+</html>

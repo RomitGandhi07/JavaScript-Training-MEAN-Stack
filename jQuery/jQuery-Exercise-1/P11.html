@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 11</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head> 
+
+    <body>
+    <p>jQuery <b>Exercises</b>.</p>
+    <p>JavaScript exercises</p>?
+    <br/>
+    <button id="removePChilds">Click to remove all child nodes of above paragraphs</button>
+
+    <!-- Script to remove all child noves of paragraphs -->
+    <script>
+        // On button click do the task
+        $("#removePChilds").click(()=>{
+            // Remove child nodes of p
+            $("p").find("*").remove();
+        });
+    </script>
+
+</body>
+
+</html>

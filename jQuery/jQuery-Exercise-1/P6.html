@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 1 - Problem 6</title>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        .red{
+            border: 2px solid red;
+        }
+        .insideDiv{
+            height: 20%;
+            width: 100%;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="iddiv">
+        <div class="insideDiv">
+            <p>Demo</p>
+        </div>
+        <span>This is a span</span>
+        <p>This is a Paragraph</p>
+        <button id="button1">Click to see the effect</button>
+    </div>
+
+    <!-- Script to find all elements within a division -->
+    <script>
+        //On button click do task
+        $("#button1").click(()=>{
+            //find all childern of div and make their border red and append no of elements before div
+            const childern=$("#iddiv").children();
+            childern.addClass("red");
+            $("#iddiv").before(`<h2>${childern.length} Elements(s) found...</h2>`);
+            $("#button1").attr("disabled",true);
+        });
+    </script>
+</body>
+
+</html>
